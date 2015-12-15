@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Librería Ux">
+    <meta name="Laura Carelli" content="">
+
+    <!-- Scripts -->
+    <script	src="libs/jquery/jquery-2.1.4.js"></script>
+    <script	src="libs/jquery-ui/jquery-ui.js"></script>
+    <script	src="libs/jquery-alphanum/jquery.alphanum.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/modernizr.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap-switch.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="libs/materialize/js/materialize.js"></script>
+    <script src="libs/jquery/jquery.range.js"></script>
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="libs/jquery/jquery.range.css">
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="libs/bootstrap/3.3.5/dist/css/bootstrap-theme.css" rel="stylesheet">-->
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-switch.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-slider.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/extra.css" rel="stylesheet">
+    <link href="libs/theme.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/material-switch.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/fontAwesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Catálogo de componentes front end</title>
+</head>
+
+<body role="document">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" id="barraup">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo-header.png" alt="Technisys"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a>Versi&oacute;n 1.1</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container-fluid">    <!-- barra left -->
+    <div class="col-sm-3 col-md-2">
+        <div class="row clearfix">
+            <div id="menucomponentes">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><a href="home.html">Componentes</a></div>
+                    <div class="list-group">
+                        <a href="buttons.html" class="list-group-item">Buttons</a>
+                        <a href="switch.html" class="list-group-item">Switch</a>
+                        <a href="labels.html" class="list-group-item">Labels</a>
+                        <a href="#" class="list-group-item">Ranger Sliders</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    <!-- barra left -->
+
+
+<div class="col-sm-6 col-sm-offset-4 col-md-8 col-md-offset-3 main" id="maincomponentes"><!-- hoja formateada-->
+    <div class="container-fluid" ><!-- hoja formateada-->
+        <!-- Labels Default-->
+        <h2 class="page-header">Labels</h2>
+        <p>
+        </p>
+        <!-- Switch Primario-->
+        <div class="contenedorcomponente">
+            <div class="description"></div>
+
+            <!-- tab-canales -->
+            <ul class="nav nav-tabs wrapcomp" role="tablist">
+                <li role="presentation" class="active"><a href="#label-secundds" aria-controls="label-secundds" role="tab" data-toggle="tab">Desktop</a></li>
+                <li role="presentation"><a href="#label-secundmb" aria-controls="label-secundmb" role="tab" data-toggle="tab">Mobile Web</a></li>
+                <li role="presentation"><a href="#label-secundandroid" aria-controls="label-secundandroid" role="tab" data-toggle="tab">Android</a></li>
+                <li role="presentation"><a href="#label-secundios" aria-controls="label-secundios" role="tab" data-toggle="tab">IOS</a></li>
+                <li role="presentation"><a href="#label-secundwin" aria-controls="label-secundwin" role="tab" data-toggle="tab">Windows Phone</a></li>
+            </ul>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <!-- Tab desktop-->
+                        <div role="tabpanel" class="tab-pane active" id="label-secundds">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <h4>H1</h4>
+                                <h1>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+                                    <span class="label label-danger">Danger</span>
+                                </h1>
+                                <br>
+                                <hr>
+
+                                <h4>H2</h4>
+                                <h2>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+
+                                </h2>
+                                <br>
+                                <hr>
+
+
+                                <h4>H3</h4>
+                                <h3>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+                                    <span class="label label-danger">Danger</span>
+                                </h3>
+                                <br>
+                                <hr>
+
+                                <h4>H4</h4>
+                                <h4>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+                                    <span class="label label-danger">Danger</span>
+                                </h4>
+                                <br>
+                                <hr>
+
+                                <h4>H5</h4>
+                                <h5>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+                                    <span class="label label-danger">Danger</span>
+                                </h5>
+                                <br>
+                                <hr>
+
+                                <h4>H6</h4>
+                                <h6>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+                                    <span class="label label-danger">Danger</span>
+                                </h6>
+                                <br>
+                                <hr>
+
+                                <h4>P</h4>
+                                <p>
+                                    <span class="label label-default">Default</span>
+                                    <span class="label label-primary">Primary</span>
+                                    <span class="label label-success">Success</span>
+                                    <span class="label label-info">Info</span>
+                                    <span class="label label-warning">Warning</span>
+                                    <span class="label label-danger">Danger</span>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#label-secunddshtml" aria-controls=label-secunddshtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#label-secunddscss" aria-controls="label-secunddscss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#label-secunddsscript" aria-controls="label-secunddsscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="label-secunddshtml">
+                    <pre><code class="html">
+                        &lt;input type=&quot;switch&quot; class=&quot;btn label-secund&quot;&gt;Primaria&lt;/input&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secunddscss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        border: 1px none black;
+                        text-align: center;
+                        font-family: Arial;
+                        width: 126px;
+                        height: 34px;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secunddsscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.label-secund').size() > 0) {
+                        $(this).find('.btn').toggleClass('label-secund');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab desktop-->
+
+                        <!-- Tab mobile-->
+                        <div role="tabpanel" class="tab-pane" id="label-secundmb">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn label-secund">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#label-secundmbhtml" aria-controls=label-secundmbhtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#label-secundmbcss" aria-controls="label-secundmbcss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#label-secundmbscript" aria-controls="label-secundmbscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="label-secundmbhtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn label-secund&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundmbcss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundmbscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.label-secund').size() > 0) {
+                        $(this).find('.btn').toggleClass('label-secund');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab mobile-->
+
+                        <!-- Tab android-->
+                        <div role="tabpanel" class="tab-pane" id="label-secundandroid">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn label-secund">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#label-secundandroidhtml" aria-controls=label-secundandroidhtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#label-secundandroidcss" aria-controls="label-secundandroidcss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#label-secundandroidscript" aria-controls="label-secundandroidscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="label-secundandroidhtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn label-secund&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundandroidcss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundandroidscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.label-secund').size() > 0) {
+                        $(this).find('.btn').toggleClass('label-secund');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab android-->
+
+                        <!-- Tab ios-->
+                        <div role="tabpanel" class="tab-pane" id="label-secundios">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn label-secund">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#label-secundioshtml" aria-controls=label-secundioshtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#label-secundioscss" aria-controls="label-secundioscss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#label-secundiosscript" aria-controls="label-secundiosscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="label-secundioshtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn label-secund&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundioscss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundiosscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.label-secund').size() > 0) {
+                        $(this).find('.btn').toggleClass('label-secund');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab ios-->
+
+                        <!-- Tab windows-->
+                        <div role="tabpanel" class="tab-pane" id="label-secundwin">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn label-secund">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#label-secundwinhtml" aria-controls=label-secundwinhtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#label-secundwincss" aria-controls="label-secundwincss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#label-secundwinscript" aria-controls="label-secundwinscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="label-secundwinhtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn label-secund&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundwincss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="label-secundwinscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.label-secund').size() > 0) {
+                        $(this).find('.btn').toggleClass('label-secund');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab windows-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Boton Primario-->
+</div>
+    </div>
+
+</body>
+</html>

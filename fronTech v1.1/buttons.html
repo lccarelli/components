@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Librería Ux">
+    <meta name="Laura Carelli" content="">
+
+    <!-- Scripts -->
+    <script	src="libs/jquery/jquery-2.1.4.js"></script>
+    <script	src="libs/jquery-ui/jquery-ui.js"></script>
+    <script	src="libs/jquery-alphanum/jquery.alphanum.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/modernizr.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap-switch.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="libs/materialize/js/materialize.js"></script>
+    <script src="libs/jquery/jquery.range.js"></script>
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="libs/jquery/jquery.range.css">
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="libs/bootstrap/3.3.5/dist/css/bootstrap-theme.css" rel="stylesheet">-->
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-switch.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-slider.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/extra.css" rel="stylesheet">
+    <link href="libs/theme.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/material-switch.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/fontAwesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Catálogo de componentes front end</title>
+</head>
+
+<body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" id="barraup">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo-header.png" alt="Technisys"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a>Versi&oacute;n 1.1</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    
+    <div class="container-fluid">    <!-- barra left -->
+        <div class="col-sm-3 col-md-2">
+            <div class="row clearfix">
+                <div id="menucomponentes">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><a href="home.html">Componentes</a></div>
+                        <div class="list-group">
+                            <a href="buttons.html" class="list-group-item">Buttons</a>
+                            <a href="switch.html" class="list-group-item">Switch</a>
+                            <a href="labels.html" class="list-group-item">Labels</a>
+                            <a href="#" class="list-group-item">Ranger Sliders</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- barra left -->
+
+
+    <div class="col-sm-6 col-sm-offset-4 col-md-8 col-md-offset-3 main" id="maincomponentes"><!-- hoja formateada-->
+        <div class="container-fluid" ><!-- hoja formateada-->
+            <!-- Buttons Default-->
+            <h2 class="page-header">Buttons Default</h2>
+            <p>Probablemente el control más utilizado en general es el botón.
+                El control de botón es altamente personalizable y permite el estilo de todo, desde el estilo del texto, sombras y color a un icono que se antepone , así como fondos totalmente personalizados.
+                Un botón puede tener varios estados, que deben ser comunicadas con lenguaje visual: default, highlighted, selected and disabled.
+            </p>
+            <!-- Boton Primario-->
+            <div class="contenedorcomponente">
+            <div class="description">Botón Primario</div>
+
+            <!-- tab-canales -->
+            <ul class="nav nav-tabs wrapcomp" role="tablist">
+                <li role="presentation" class="active"><a href="#btn-primaryds" aria-controls="btn-primaryds" role="tab" data-toggle="tab">Desktop</a></li>
+                <li role="presentation"><a href="#btn-primarymb" aria-controls="btn-primarymb" role="tab" data-toggle="tab">Mobile Web</a></li>
+                <li role="presentation"><a href="#btn-primaryandroid" aria-controls="btn-primaryandroid" role="tab" data-toggle="tab">Android</a></li>
+                <li role="presentation"><a href="#btn-primaryios" aria-controls="btn-primaryios" role="tab" data-toggle="tab">IOS</a></li>
+                <li role="presentation"><a href="#btn-primarywin" aria-controls="btn-primarywin" role="tab" data-toggle="tab">Windows Phone</a></li>
+            </ul>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <!-- Tab desktop-->
+                        <div role="tabpanel" class="tab-pane active" id="btn-primaryds">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn btn-primary">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#btn-primarydshtml" aria-controls=btn-primarydshtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#btn-primarydscss" aria-controls="btn-primarydscss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#btn-primarydsscript" aria-controls="btn-primarydsscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="btn-primarydshtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primarydscss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        border: 1px none black;
+                        text-align: center;
+                        font-family: Arial;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        text-decoration: none;
+                        background: #0064AB;
+                        border-bottom: 0;
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                        border-left: 0;
+                        border-right: 0;
+                        border-top: 0;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                        cursor: pointer;
+                        line-height: 11px;
+                        margin: 5px;
+                        width: 126px;
+                        height: 34px;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primarydsscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.btn-primary').size() > 0) {
+                        $(this).find('.btn').toggleClass('btn-primary');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab desktop-->
+
+                        <!-- Tab mobile-->
+                        <div role="tabpanel" class="tab-pane" id="btn-primarymb">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn btn-primary">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#btn-primarymbhtml" aria-controls=btn-primarymbhtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#btn-primarymbcss" aria-controls="btn-primarymbcss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#btn-primarymbscript" aria-controls="btn-primarymbscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="btn-primarymbhtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primarymbcss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primarymbscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.btn-primary').size() > 0) {
+                        $(this).find('.btn').toggleClass('btn-primary');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab mobile-->
+
+                        <!-- Tab android-->
+                        <div role="tabpanel" class="tab-pane" id="btn-primaryandroid">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn btn-primary">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#btn-primaryandroidhtml" aria-controls=btn-primaryandroidhtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#btn-primaryandroidcss" aria-controls="btn-primaryandroidcss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#btn-primaryandroidscript" aria-controls="btn-primaryandroidscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="btn-primaryandroidhtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primaryandroidcss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primaryandroidscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.btn-primary').size() > 0) {
+                        $(this).find('.btn').toggleClass('btn-primary');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab android-->
+
+                        <!-- Tab ios-->
+                        <div role="tabpanel" class="tab-pane" id="btn-primaryios">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn btn-primary">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#btn-primaryioshtml" aria-controls=btn-primaryioshtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#btn-primaryioscss" aria-controls="btn-primaryioscss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#btn-primaryiosscript" aria-controls="btn-primaryiosscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="btn-primaryioshtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primaryioscss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primaryiosscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.btn-primary').size() > 0) {
+                        $(this).find('.btn').toggleClass('btn-primary');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab ios-->
+
+                        <!-- Tab windows-->
+                        <div role="tabpanel" class="tab-pane" id="btn-primarywin">
+                            <div class="tab-content wrap-comp wrapcomponente">
+                                <p>
+                                    <button type="button" class="btn btn-primary">Primaria</button>
+                                </p>
+                            </div>
+
+                            <ul class="nav nav-pills wrap-code">
+                                <li role="presentation" class="active"><a href="#btn-primarywinhtml" aria-controls=btn-primarywinhtml" role="tab" data-toggle="tab">HTML</a></li>
+                                <li role="presentation"><a href="#btn-primarywincss" aria-controls="btn-primarywincss" role="tab" data-toggle="tab">CSS</a></li>
+                                <li role="presentation"><a href="#btn-primarywinscript" aria-controls="btn-primarywinscript" role="tab" data-toggle="tab">SCRIPT</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="btn-primarywinhtml">
+                    <pre><code class="html">
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primaria&lt;/button&gt;
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primarywincss">
+                    <pre><code class="css3">
+                        .action-button_default_blue {
+                        color: #FFFFFF;
+                        }
+                    </code></pre>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="btn-primarywinscript">
+                    <pre><code class="script">
+                        $(function() {
+                        $('.btn-toggle').click(function () {
+                        $(this).find('.btn').toggleClass('active');
+
+                        if ($(this).find('.btn-primary').size() > 0) {
+                        $(this).find('.btn').toggleClass('btn-primary');
+                        }
+                        });
+                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab windows-->
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Boton Primario-->
+
+
+
+            <!-- Buttons Default-->
+            <!-- hoja formateada-->
+        </div>
+    </div>
+
+
+</body>
+
+<br><br>
+
+
+<!--
+ Bootstrap core JavaScript
+==================================================
+ Placed at the end of the document so the pages load faster
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/docs.min.js"></script>
+&lt;!&ndash; IE10 viewport hack for Surface/desktop Windows 8 bug &ndash;&gt;
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+-->
+
+</html>

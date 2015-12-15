@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="description" content="Examples for bootstrap-slider plugin">
+    <meta name="author" content="">
+
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- jquery -->
+    <script	src="libs/jquery/jquery-2.1.4.js"></script>
+    <script	src="libs/jquery-ui/1.11.4.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="libs/jquery-ui/1.11.4.custom/jquery-ui.min.css">
+    <script	src="libs/jquery-alphanum/jquery.alphanum.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/modernizr.js"></script>
+    <!-- switch -->
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap-switch.js"></script>
+    <script src="libs/bootstrap/3.3.5/dist/js/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="libs/materialize/js/materialize.min.js"></script>
+    <script src="libs/material/material.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-switch.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/bootstrap-slider.css" rel="stylesheet">
+    <link href="libs/bootstrap/3.3.5/dist/css/extra.css" rel="stylesheet">
+    <link href="libs/material/material.css" rel="stylesheet">
+<!--    <link href="libs/materialize/css/materialize.css" rel="stylesheet">-->
+    <link href="libs/theme.css" rel="stylesheet">
+
+    <link href="libs/bootstrap/3.3.5/dist/css/material-switch.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="libs/bootstrap/3.3.5/dist/js/jquery.range.css">
+    <script src="libs/bootstrap/3.3.5/dist/js/jquery.range.js"></script>
+
+
+
+
+    <script>
+        
+        $(function() {
+            $('.btn-toggle').click(function () {
+                $(this).find('.btn').toggleClass('active');
+
+                if ($(this).find('.btn-primary').size() > 0) {
+                    $(this).find('.btn').toggleClass('btn-primary');
+                }
+                if ($(this).find('.btn-danger').size() > 0) {
+                    $(this).find('.btn').toggleClass('btn-danger');
+                }
+                if ($(this).find('.btn-success').size() > 0) {
+                    $(this).find('.btn').toggleClass('btn-success');
+                }
+                if ($(this).find('.btn-info').size() > 0) {
+                    $(this).find('.btn').toggleClass('btn-info');
+                }
+
+                $(this).find('.btn').toggleClass('btn-default');
+
+            });
+
+            $('form').submit(function () {
+                alert($(this["options"]).val());
+                return false;
+            });
+
+            // script switcher//
+            $('input[name="my-checkbox"]').bootstrapSwitch('state', true, true);
+
+            var slider = document.getElementById('test5');
+            noUiSlider.create(slider, {
+                start: [20, 80],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': 0,
+                    'max': 100
+                },
+                format: wNumb({
+                    decimals: 0
+                })
+            });
+        });
+    </script>
+
+
+    <title>Catálogo de componentes front end</title>
+</head>
+
+<body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo-header.png" alt="Technisys"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a>Versi&oacute;n 1.0</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    
+    <div class="jumbotron"> <!-- Jumbotron -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Catálogo de componentes front end</h1>
+                    <p>ux team</p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of Jumbotron -->
+    
+    <div class="container"> <!-- Introduccion -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well">
+                    <p><strong>frontTech</strong> es un framework <strong>HTML, CSS</strong> y <strong>Jquery</strong> creado a partir de varias librerías, y customizado para resolver el front-end omnicanal <strong>Techbank</strong>.</p>
+                    <p><strong>frontTech</strong> es en origen responsive, accesible, cross-browser y mobile first, al estar basado en concepto <strong>Bootstrap</strong> y <strong>Material Design</strong>.                </div>
+            </div>
+        </div>
+    </div> <!-- Fin de la introduccion -->
+
+    <div class="container"> <!-- Switch -->
+        <h2>Switch Button</h2>
+        <p class="page-header"></p>
+        <h4>Large</h4>
+        <div class="btn-group btn-toggle">
+            <button class="btn btn-lg btn-default">ON</button>
+            <button class="btn btn-lg btn-primary active">OFF</button>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Switch Default
+                <div class="material-switch pull-right">
+                    <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                    <label for="someSwitchOptionDefault" class="label-default"></label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                Switch Primary
+                <div class="material-switch pull-right">
+                    <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
+                    <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="switch">
+            <label>
+                Off
+                <input type="checkbox">
+                <span class="lever"></span>
+                On
+            </label>
+        </div>
+
+        <!-- Disabled Switch -->
+        <div class="switch">
+            <label>
+                Off
+                <input disabled type="checkbox">
+                <span class="lever"></span>
+                On
+            </label>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </div> <!-- Fin de los Switches -->
+    
+    <div class="container"> <!-- Slider -->
+        <h2>Sliders</h2>
+        <p class="page-header"></p>
+        <br>
+        <p>Range Slider</p>
+        <p class="range-field">
+            <input type="range" id="test5" min="0" max="100" />
+        </p>
+        <br>
+        <hr>
+    </div> <!-- fin del slider -->
+
+    <div class="container"> <!-- Slider -->
+        <h2>Barra</h2>
+        <p class="page-header"></p>
+        <br>
+        <p>Barra Progress</p>
+        <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+        <br>
+        <hr>
+
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+    </div> <!-- fin del slider -->
+
+    <div class="container"> <!-- Forms -->
+        <h2>Formularios</h2>
+        <p class="page-header"></p>
+        <br>
+        <p>Forms Dinámicos</p>
+        <br>
+    <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3" />
+            <label class="mdl-textfield__label" for="sample3">Text...</label>
+        </div>
+    </form>
+        <br>
+         <!-- Simple Textfield -->
+        <br>
+        <p>Forms Estáticos</p>
+        <br>
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1" />
+                <label class="mdl-textfield__label" for="sample1">Text...</label>
+            </div>
+        </form>
+        <br>
+        <hr>
+        <br>
+
+        <div class="container"> <!-- Forms -->
+            <h2>Badges</h2>
+            <p class="page-header"></p>
+            <br>
+
+            <br>
+        <!-- Number badge on icon -->
+            <p>
+            <span class="mdl-badge" data-badge="4">Inbox</span>
+            <span class="mdl-badge" data-badge="♥">Mood</span>
+            <a href="#">Inbox <span class="badge">42</span></a>
+            </p>
+            <br>
+            <hr>
+            <br>
+            <p>Pills</p>
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+        <div class="container"> <!-- Cards -->
+            <h2>Cards</h2>
+            <p class="page-header"></p>
+            <br>
+            <p>Cards Estáticos</p>
+            <br>
+
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Welcome</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Get Started
+                </a>
+            </div>
+            <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                </button>
+            </div>
+        </div>
+    </div> <!-- fin del forms -->
+        <br>
+        <br>
+        <hr>
+        <br>
+
+
+        <div class="container"> <!-- Botones -->
+        <div class="page-header">
+            <h1>Botones</h1>
+        </div>
+
+        <p>Botón de acción primaria</p>
+
+        <p>
+            <button type="button" class="btn btn-lg btn-primary">Primaria</button>
+            <button type="button" class="btn btn-lg btn-inactive">Inactivo</button>
+        </p>
+        <hr>
+
+        <p>Botón de acción secundaria</p>
+        <p>
+            <button type="button" class="btn btn-lg btn-success">Success</button>
+            <button type="button" class="btn btn-lg btn-info">Info</button>
+            <button type="button" class="btn btn-lg btn-warning">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger">Danger</button>
+            <button type="button" class="btn btn-lg btn-link">Link</button>
+        </p>
+        <hr>
+        
+        <h4>Tama&ntilde;os</h4>
+        <hr>
+        <p>
+            <button type="button" class="btn btn-lg btn-default">Large</button>
+            <button type="button" class="btn btn-lg btn-primary">Primary</button>
+            <button type="button" class="btn btn-lg btn-success">Success</button>
+            <button type="button" class="btn btn-lg btn-info">Info</button>
+            <button type="button" class="btn btn-lg btn-warning">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger">Danger</button>
+            <button type="button" class="btn btn-lg btn-link">Link</button>
+        </p>
+        <hr>
+        <p>
+            <button type="button" class="btn btn-default">Medium</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button>
+        </p>
+        <hr>
+        <p>
+            <button type="button" class="btn btn-sm btn-default">Small</button>
+            <button type="button" class="btn btn-sm btn-primary">Primary</button>
+            <button type="button" class="btn btn-sm btn-success">Success</button>
+            <button type="button" class="btn btn-sm btn-info">Info</button>
+            <button type="button" class="btn btn-sm btn-warning">Warning</button>
+            <button type="button" class="btn btn-sm btn-danger">Danger</button>
+            <button type="button" class="btn btn-sm btn-link">Link</button>
+        </p>
+        <hr>
+        <p>
+            <button type="button" class="btn btn-xs btn-default">Extra Small</button>
+            <button type="button" class="btn btn-xs btn-primary">Primary</button>
+            <button type="button" class="btn btn-xs btn-success">Success</button>
+            <button type="button" class="btn btn-xs btn-info">Info</button>
+            <button type="button" class="btn btn-xs btn-warning">Warning</button>
+            <button type="button" class="btn btn-xs btn-danger">Danger</button>
+            <button type="button" class="btn btn-xs btn-link">Link</button>
+        </p>
+        <hr>
+
+            <h4>Botones Material Design</h4>
+            <hr>
+            <p>
+                <!-- Raised button -->
+                <button class="mdl-button mdl-js-button mdl-button--raised">
+                    Button
+                </button>
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    Button
+                </button>
+                <!-- Raised disabled button-->
+                <button class="mdl-button mdl-js-button mdl-button--raised" disabled>
+                    Button
+                </button>
+            </p>
+            <hr>
+            <p>
+                <!-- Colored raised button -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Button
+                </button>
+                <!-- Accent-colored raised button -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                    Button
+                </button>
+                <!-- Accent-colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Button
+                </button>
+            </p>
+            <hr>
+            <p>
+                <!-- FAB button -->
+                <button class="mdl-button mdl-js-button mdl-button--fab">
+                    <i class="material-icons">+</i>
+                </button>
+                <!-- FAB button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+                    <i class="material-icons">+</i>
+                </button>
+                <!-- Disabled FAB button -->
+                <button class="mdl-button mdl-js-button mdl-button--fab" disabled>
+                    <i class="material-icons">+</i>
+                </button>
+            </p>
+            <hr>
+            <p>
+                <!-- Colored FAB button -->
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                    <i class="material-icons">+</i>
+                </button>
+                <!-- Colored FAB button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                    <i class="material-icons">+</i>
+                </button>
+            </p>
+            <hr>
+            <p>
+
+    </div> <!-- Fin de los botones -->
+        
+
+    <div class="container"> <!-- Tablas -->
+        <div class="page-header">
+            <h1>Tables</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Basic</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <h4>Stripped</h4>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <br>
+                <h4>Bordered</h4>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@TwBootstrap</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <h4>With Hover</h4>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <br>
+                    <h4>With hover - Material Design</h4>
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Name</th>
+                            <th>Age</th>
+                            <th>ID Number</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don Aubrey</td>
+                            <td>25</td>
+                            <td>49021</td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Sophia Carson</td>
+                            <td>32</td>
+                            <td>10258</td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Steve Moreno</td>
+                            <td>29</td>
+                            <td>12359</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <h4>With Selection Items</h4>
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Material</th>
+                            <th>Quantity</th>
+                            <th>Unit price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                            <td>25</td>
+                            <td>$2.90</td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                            <td>50</td>
+                            <td>$1.25</td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                            <td>10</td>
+                            <td>$2.35</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <hr>
+    </div> <!-- Fin de las tablas -->
+    
+    <div class="container"> <!-- Labels -->
+        
+        <div class="page-header">
+            <h1>Labels</h1>
+        </div>
+        <h4>H1</h4>
+        <h1>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </h1>
+        <br>
+        <hr>
+        
+        <h4>H2</h4>
+        <h2>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+
+        </h2>
+        <br>
+        <hr>
+
+        
+        <h4>H3</h4>
+        <h3>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </h3>
+        <br>
+        <hr>
+        
+        <h4>H4</h4>
+        <h4>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </h4>
+        <br>
+        <hr>
+         
+        <h4>H5</h4>
+        <h5>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </h5>
+        <br>
+        <hr>
+        
+        <h4>H6</h4>
+        <h6>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </h6>
+        <br>
+        <hr>
+        
+        <h4>P</h4>
+        <p>
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+            <span class="label label-danger">Danger</span>
+        </p>
+        <hr>
+    </div> <!-- Fin de los Labels -->
+
+    
+    <div class="container"> <!-- Dropdown -->
+        <div class="page-header">
+            <h1>Dropdown menus</h1>
+        </div>
+        
+        <div class="dropdown theme-dropdown clearfix">
+            <a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="active"><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <hr>
+
+
+    </div> <!-- Fin del Dropdown -->
+    
+    <div class="container"> <!-- Nav -->
+        <div class="page-header">
+            <h1>Navs</h1>
+        </div>
+        <p>Tabs</p>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+        <br>
+        <hr>
+        
+        <p>Pills</p>
+        <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+    </div> <!-- Fin del Nav -->
+    
+    <div class="container"> <!-- Navbar -->
+        <div class="page-header">
+            <h1>Navbars</h1>
+        </div>
+        
+        <p>Default</p>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <br>
+        <hr>
+        
+        <p>Inverse</p>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <br>
+        <hr>
+    </div> <!-- Fin de los Navbars -->
+    
+    <div class="container"> <!-- Alertas -->
+        <div class="page-header">
+            <h1>Alerts</h1>
+        </div>
+        
+        <p>Success</p>
+        <div class="alert alert-success" role="alert">
+            <strong>Well done!</strong> You successfully read this important alert message.
+        </div>
+        <hr>
+        
+        <p>Info</p>
+        <div class="alert alert-info" role="alert">
+            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+        </div>
+        <hr>
+        
+        <p>Warning</p>
+        <div class="alert alert-warning" role="alert">
+            <strong>Warning!</strong> Best check yo self, you're not looking too good.
+        </div>
+        <hr>
+        
+        <p>Danger</p>
+        <div class="alert alert-danger" role="alert">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        </div>
+    </div> <!-- Fin de las Alertas -->
+    
+    <div class="container"> <!-- Progress Bars -->
+        <div class="page-header">
+            <h1>Progress bars</h1>
+        </div>
+        
+        <p>Default</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+        </div>
+        <br><hr>
+        
+        <p>With Label</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
+        </div>
+        <br><hr>
+        
+        <p>Contextual Alternatives</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-defaut" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+        </div>
+        <br><hr>
+        
+        <p>Sripped</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+        </div>
+        <br><hr>
+        
+        <p>With animation</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                <span class="sr-only">45% Complete</span>
+            </div>
+        </div>
+        <br><hr>
+        
+        <p>Stacked</p>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
+        </div>
+    </div> <!-- Fin de los Progress Bars -->
+    
+    <div class="container"> <!-- List Groups -->
+        <div class="page-header">
+            <h1>List groups</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>Basic</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <p>With Badges</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <p>With Linked Items</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                </div>
+            </div><!-- /.col-sm-4 -->
+        </div>
+        <hr>
+    </div> <!-- Fin de los List Groups -->
+
+    <div class="container"> <!-- Panels -->
+        <div class="page-header">
+            <h1>Panels</h1>
+            <p>With headings</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+        </div>
+        <hr>
+    </div> <!-- Fin de los Panels -->
+    
+    <div class="container"> <!-- Wells -->
+        <div class="page-header">
+            <h1>Well</h1>
+        </div>
+        
+        <div class="well">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <hr>
+    </div> <!-- Fin de los Wells -->
+    
+    <div class="container"> <!-- Carrusel -->
+        <div class="page-header">
+            <h1>Carousel</h1>
+        </div>
+        
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://placehold.it/1000x250" alt="First Item">
+                </div>
+                <div class="item">
+                    <img src="http://placehold.it/350x150" alt="Second Item">
+                </div>
+                <div class="item">
+                    <img src="http://placehold.it/350x150" alt="Third Item">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div> <!-- Fin del Carrusel -->
+    
+    <br><br>
+    
+<!--    <footer> &lt;!&ndash; Footer &ndash;&gt;
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+                <div class="navbar-header"></div>
+                
+                &lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a>frontTech es Propiedad de Technisys S.A - Elaborado por el departamento de UX</a></li>
+                    </ul>
+                </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;
+            </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
+        </nav>
+    </footer> &lt;!&ndash; Fin del Footer &ndash;&gt;
+
+
+&lt;!&ndash; Bootstrap core JavaScript
+================================================== &ndash;&gt;
+&lt;!&ndash; Placed at the end of the document so the pages load faster &ndash;&gt;
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/docs.min.js"></script>
+&lt;!&ndash; IE10 viewport hack for Surface/desktop Windows 8 bug &ndash;&gt;
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+</body>
+</html>
